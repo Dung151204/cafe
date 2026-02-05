@@ -1,0 +1,31 @@
+/* src/components/inventory/AddProductModal.css */
+.modal-overlay {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5); z-index: 1000;
+  display: flex; justify-content: center; align-items: center;
+}
+
+.add-product-modal {
+  background: white; width: 600px; padding: 30px; border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  animation: slideDown 0.3s;
+}
+
+.modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.modal-header h3 { margin: 0; font-size: 20px; }
+.btn-close-modal { background: none; border: none; font-size: 28px; cursor: pointer; color: #888; }
+
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-group { display: flex; flex-direction: column; gap: 8px; }
+.form-group label { font-size: 13px; font-weight: 500; color: #333; }
+.form-group input { padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none; font-size: 14px; }
+.form-group input:focus { border-color: #2563EB; }
+
+/* Làm ô tên sản phẩm rộng full dòng */
+.form-group:first-child { grid-column: span 2; }
+
+.modal-footer { display: flex; justify-content: flex-end; gap: 10px; margin-top: 30px; }
+.btn-cancel { padding: 10px 20px; border: 1px solid #ddd; background: white; border-radius: 20px; cursor: pointer; }
+.btn-submit { padding: 10px 20px; background: #2563EB; color: white; border: none; border-radius: 20px; cursor: pointer; font-weight: 500; }
+
+@keyframes slideDown { from { transform: translateY(-20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }

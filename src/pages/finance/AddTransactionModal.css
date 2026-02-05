@@ -1,0 +1,33 @@
+/* src/pages/finance/AddTransactionModal.css */
+.modal-overlay {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5); z-index: 1000;
+  display: flex; justify-content: center; align-items: center;
+}
+.transaction-modal {
+  background: white; width: 500px; padding: 30px; border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15); animation: slideDown 0.3s;
+}
+.modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.modal-header h3 { margin: 0; font-size: 20px; }
+.btn-close-modal { background: none; border: none; font-size: 24px; cursor: pointer; color: #999; }
+
+.type-toggle { display: flex; gap: 15px; margin-bottom: 20px; }
+.type-option {
+  flex: 1; padding: 12px; border-radius: 10px; border: 1px solid #eee;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  cursor: pointer; font-weight: 600; transition: 0.2s; color: #666;
+}
+.type-option.income.active { background: #ecfdf5; border-color: #10b981; color: #10b981; }
+.type-option.expense.active { background: #fef2f2; border-color: #ef4444; color: #ef4444; }
+
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: 500; font-size: 13px; }
+.form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; outline: none; box-sizing: border-box; }
+.form-group input:focus, .form-group textarea:focus { border-color: #2563EB; }
+
+.modal-footer { display: flex; justify-content: flex-end; gap: 10px; margin-top: 25px; }
+.btn-cancel { padding: 10px 20px; border: 1px solid #ddd; background: white; border-radius: 8px; cursor: pointer; }
+.btn-submit { padding: 10px 20px; background: #2563EB; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; }
+
+@keyframes slideDown { from { transform: translateY(-20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }

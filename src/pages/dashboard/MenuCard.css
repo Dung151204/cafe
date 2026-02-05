@@ -1,0 +1,47 @@
+/* src/components/dashboard/MenuCard.css */
+.menu-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column; /* Xếp dọc: Icon -> Tên -> Mô tả */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* Bóng mờ rất nhẹ */
+  border: 1px solid #f0f0f0; /* Viền mờ */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 100%; /* Để các ô cao bằng nhau */
+}
+
+.menu-card:hover {
+  transform: translateY(-4px); /* Bay lên nhẹ khi di chuột */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border-color: transparent;
+}
+
+.icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px; /* Bo góc vuông mềm */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px; /* Kích thước icon */
+  margin-bottom: 16px; /* Cách phần chữ bên dưới */
+}
+
+.menu-card h3 {
+  margin: 0 0 6px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: #8c8c8c; /* Màu xám nhạt */
+  font-weight: 400;
+}

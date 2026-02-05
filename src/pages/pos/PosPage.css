@@ -1,0 +1,217 @@
+/* src/pages/pos/PosPage.css */
+
+/* --- 1. KHUNG SƯỜN CHÍNH (LAYOUT) --- */
+.pos-layout {
+  height: 100vh; /* Chiều cao bằng màn hình */
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden; /* Không cho thanh cuộn thừa xuất hiện */
+}
+
+/* --- 2. HEADER --- */
+.pos-header {
+  height: 60px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Căn đều 2 bên */
+  padding: 0 20px;
+  flex-shrink: 0;
+}
+
+.header-left { display: flex; gap: 10px; align-items: center; }
+
+.btn-back, .btn-secondary {
+  border: 1px solid #ddd;
+  background: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #333;
+}
+.btn-back:hover { background-color: #f5f5f5; }
+
+.header-title { display: flex; flex-direction: column; margin-left: 10px; }
+.header-title strong { font-size: 16px; }
+.header-title span { font-size: 12px; color: #888; }
+
+
+/* --- 3. NỘI DUNG CHÍNH (CHIA 3 CỘT) --- */
+.pos-content {
+  display: flex;
+  flex: 1; /* Chiếm hết phần còn lại của màn hình */
+  overflow: hidden;
+}
+
+/* Cột giữa: Danh sách sản phẩm */
+.product-list-section {
+  flex: 1; /* Tự co giãn */
+  padding: 20px;
+  overflow-y: auto; /* Cho phép cuộn dọc */
+  background-color: #f0f2f5;
+}
+
+/* QUAN TRỌNG: Lưới sản phẩm (Grid) - Đây là cái bạn bị thiếu */
+.product-grid {
+  display: grid;
+  /* Tự động chia cột, mỗi cột tối thiểu 180px */
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  padding-bottom: 40px;
+}
+
+
+/* --- 4. CỘT PHẢI: GIỎ HÀNG (SIDEBAR) --- */
+.cart-sidebar {
+  width: 360px; /* Chiều rộng cố định */
+  background: white;
+  border-left: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 100%;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.cart-header h3 { margin: 0; font-size: 18px; }
+.badge-count { background: #eee; padding: 2px 8px; border-radius: 10px; font-size: 12px; }
+
+/* Input thông tin khách */
+.customer-info { display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px;}
+.input-group { 
+  position: relative; 
+  background: #f8f9fa; 
+  border-radius: 8px; 
+  border: 1px solid #eee;
+  display: flex;
+  align-items: center;
+}
+.input-icon { margin-left: 10px; color: #999; }
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+/* Select chọn bàn */
+.table-select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+/* --- 5. DANH SÁCH MÓN TRONG GIỎ --- */
+.cart-items-list {
+  flex: 1;
+  overflow-y: auto; /* Cuộn nếu giỏ hàng dài */
+  margin-bottom: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+/* Giỏ hàng trống */
+.cart-empty {
+  text-align: center;
+  color: #999;
+  margin-top: 50px;
+}
+.empty-icon { font-size: 40px; display: block; margin-bottom: 10px; }
+
+/* Một dòng món ăn */
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.item-info { width: 35%; }
+.item-info strong { display: block; font-size: 13px; margin-bottom: 2px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.item-info span { font-size: 12px; color: #888; }
+
+.item-actions {
+  display: flex;
+  align-items: center;
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+.item-actions button {
+  border: none;
+  background: transparent;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item-actions span { font-size: 12px; font-weight: bold; width: 20px; text-align: center; }
+
+.item-total { font-size: 13px; font-weight: bold; color: #333; margin-left: 5px; }
+
+.btn-remove {
+  border: none;
+  background: transparent;
+  color: #ff4d4f;
+  cursor: pointer;
+  margin-left: 5px;
+  padding: 5px;
+}
+
+/* --- 6. FOOTER THANH TOÁN --- */
+.cart-footer {
+  border-top: 2px solid #f0f0f0;
+  padding-top: 15px;
+  background: white; /* Đảm bảo nền trắng */
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.price-row.total {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.total-price { color: #2563EB; }
+
+.btn-checkout {
+  width: 100%;
+  padding: 15px;
+  background-color: #2563EB;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-checkout:hover { background-color: #1d4ed8; }
+.btn-checkout:disabled { background-color: #ccc; cursor: not-allowed; }

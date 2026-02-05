@@ -1,0 +1,127 @@
+/* src/pages/auth/LoginPage.css */
+
+/* Bao ngoài cùng: Nền Gradient trắng xanh nhẹ cho sang trọng */
+.login-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Xếp dọc: Logo -> Card -> Footer */
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F0F4F8 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- PHẦN HEADER --- */
+.header-section {
+  text-align: center;
+  margin-bottom: 30px; /* Cách cái card ra một chút */
+}
+
+.logo-box {
+  width: 60px;
+  height: 60px;
+  background-color: #0052CC; /* Màu xanh của Logo */
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 15px; /* Căn giữa và cách chữ bên dưới */
+  box-shadow: 0 4px 10px rgba(0, 82, 204, 0.3);
+}
+
+.header-section h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #172B4D;
+  margin: 0 0 5px 0;
+}
+
+.header-section p {
+  color: #5E6C84;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* --- PHẦN CARD --- */
+.login-card {
+  background: white;
+  padding: 40px;
+  border-radius: 16px; /* Bo tròn nhiều hơn cho mềm mại */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05); /* Bóng mờ rất nhẹ */
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #42526E;
+}
+
+/* --- TẠO INPUT GIỐNG FIGMA --- */
+.custom-input {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #F4F5F7; /* Màu xám nhạt nền input */
+  border: 1px solid transparent; /* Mẹo: Để viền trong suốt */
+  border-radius: 8px;
+  font-size: 14px;
+  color: #172B4D;
+  transition: all 0.2s;
+  box-sizing: border-box; /* Quan trọng để không bị vỡ khung */
+}
+
+.custom-input:focus {
+  background-color: white;
+  border-color: #2684FF; /* Khi bấm vào thì viền xanh */
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(38, 132, 255, 0.2);
+}
+
+/* --- XỬ LÝ NÚT CON MẮT --- */
+.password-wrapper {
+  position: relative; /* Để con mắt có thể đặt tuyệt đối bên trong */
+}
+
+.eye-icon {
+  position: absolute;
+  right: 15px; /* Cách lề phải 15px */
+  top: 50%;
+  transform: translateY(-50%); /* Căn giữa chiều dọc */
+  cursor: pointer;
+  color: #6B778C;
+  font-size: 18px;
+}
+
+/* --- NÚT BẤM --- */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #0052CC; /* Màu xanh chuẩn Figma */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+
+.login-btn:hover {
+  background-color: #0747A6;
+}
+
+/* --- FOOTER --- */
+.footer-text {
+  margin-top: 30px;
+  font-size: 12px;
+  color: #97A0AF;
+}

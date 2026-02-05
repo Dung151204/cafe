@@ -1,0 +1,39 @@
+.shift-page-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F3F4F6;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.shift-card {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  width: 400px;
+  text-align: center;
+}
+
+.shift-header h2 { margin: 0 0 10px 0; color: #111; font-size: 24px; }
+.shift-header p { color: #666; margin-bottom: 30px; font-size: 14px; }
+
+.form-group { text-align: left; margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #374151; display: flex; align-items: center; gap: 8px; }
+.form-group input { width: 100%; padding: 12px; border: 1px solid #D1D5DB; border-radius: 8px; font-size: 16px; outline: none; box-sizing: border-box; }
+.form-group input:focus { border-color: #2563EB; }
+
+.btn-open-shift { width: 100%; padding: 14px; background: #2563EB; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+.btn-open-shift:hover { background: #1d4ed8; }
+
+.btn-end-shift { width: 100%; padding: 14px; background: #EF4444; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; }
+.btn-end-shift:hover { background: #DC2626; }
+
+.shift-info-box { background: #F9FAFB; padding: 20px; border-radius: 12px; margin-bottom: 30px; border: 1px solid #E5E7EB; }
+.info-row { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 15px; color: #4B5563; }
+.info-row strong { color: #111; }
+.info-row.highlight { margin-top: 15px; padding-top: 15px; border-top: 1px dashed #D1D5DB; color: #2563EB; font-weight: bold; }
+
+.btn-logout-link { background: none; border: none; color: #666; margin-top: 20px; cursor: pointer; text-decoration: underline; }
+.btn-back-dash { background: none; border: none; color: #666; margin-bottom: 20px; cursor: pointer; display: flex; align-items: center; gap: 5px; }

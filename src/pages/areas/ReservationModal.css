@@ -1,0 +1,5 @@
+.res-modal { background: white; width: 450px; padding: 25px; border-radius: 12px; animation: fadeIn 0.2s; box-shadow: 0 10px 40px rgba(0,0,0,0.25); }
+.form-row { display: flex; gap: 15px; }
+.form-group.half { flex: 1; }
+.btn-confirm-res { width: 100%; padding: 12px; background: #F59E0B; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px; }
+.btn-confirm-res:hover { background: #d97706; }

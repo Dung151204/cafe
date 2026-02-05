@@ -1,0 +1,129 @@
+/* src/components/pos/PaymentModal.css */
+
+/* --- CẤU TRÚC MODAL --- */
+.modal-overlay {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex; justify-content: center; align-items: center; z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-content {
+  background: white; width: 500px; border-radius: 16px; padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2); position: relative;
+  animation: slideUp 0.3s ease-out;
+}
+
+/* HEADER */
+.modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.modal-header h3 { margin: 0; font-size: 20px; color: #111; }
+.btn-close { background: none; border: none; font-size: 20px; color: #999; cursor: pointer; }
+
+.payment-summary { background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+.summary-row.total { 
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 18px; font-weight: bold; color: #111;
+}
+.big-text { font-size: 24px; color: #2563EB; }
+
+/* --- PHƯƠNG THỨC THANH TOÁN (GRID 2 CỘT) --- */
+.section-label { font-size: 14px; color: #444; margin-bottom: 10px; font-weight: 500; }
+
+.methods-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Chia 2 cột đều nhau */
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* --- ĐÃ SỬA ĐOẠN NÀY ĐỂ NÚT TO ĐẸP HƠN --- */
+.method-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 0; /* Xóa padding để căn giữa chuẩn hơn */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #666;
+  
+  /* Cố định kích thước chuẩn */
+  height: 100px; 
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+.method-icon { font-size: 28px; margin-bottom: 8px; } /* Icon to hơn xíu */
+.method-card span { font-size: 14px; font-weight: 500; }
+
+.method-card.active {
+  border: 2px solid #2563EB; background-color: #eff6ff; color: #2563EB; font-weight: 600;
+}
+
+/* --- KHUNG TÍNH TIỀN --- */
+.cash-calculation { background-color: #F3F4F6; padding: 15px; border-radius: 12px; margin-bottom: 20px; }
+.input-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; }
+.money-input-wrapper { position: relative; width: 65%; }
+.money-input-wrapper input {
+  width: 100%; padding: 10px 30px 10px 15px; font-size: 18px; font-weight: bold;
+  border: 1px solid #d1d5db; border-radius: 8px; text-align: right; outline: none;
+}
+.money-input-wrapper input:focus { border-color: #2563EB; }
+.currency-unit { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: #6b7280; font-weight: 600; }
+
+.change-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 10px; border-top: 1px dashed #d1d5db; font-size: 15px;
+}
+.change-value { font-size: 20px; font-weight: 800; color: #16A34A; }
+.change-row.negative .change-value { color: #DC2626; }
+
+.quick-money-suggestions { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; justify-content: flex-end; }
+.quick-money-suggestions button {
+  background: white; border: 1px solid #d1d5db; padding: 6px 12px; border-radius: 6px; cursor: pointer;
+}
+.quick-money-suggestions button:hover { border-color: #2563EB; color: #2563EB; }
+
+/* FOOTER */
+.modal-footer { display: flex; gap: 15px; justify-content: flex-end; margin-top: 10px; }
+.btn-cancel { padding: 10px 24px; border: 1px solid #ddd; background: white; border-radius: 30px; cursor: pointer; }
+.btn-confirm { padding: 10px 24px; background: #2563EB; border: none; border-radius: 30px; cursor: pointer; color: white; display: flex; align-items: center; }
+.btn-confirm:hover { background: #1d4ed8; }
+
+/* SUCCESS MODE */
+.success-mode { text-align: center; padding: 40px 30px; width: 400px; }
+.success-icon {
+  width: 70px; height: 70px; background-color: #dcfce7; color: #16a34a;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 35px; margin: 0 auto 15px;
+}
+/* Style riêng cho icon Chờ (Thanh toán sau) */
+.success-icon.pending-icon { background-color: #FEF3C7; color: #D97706; } /* Màu vàng cam */
+
+.success-total { font-size: 28px; font-weight: bold; color: #2563EB; margin: 10px 0; }
+.change-note { color: #16A34A; font-size: 16px; margin-top: 5px;}
+.note-text { color: #666; font-size: 14px; margin-top: 5px; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+/* src/components/pos/PaymentModal.css */
+
+/* ... (Phần trên giữ nguyên) ... */
+
+/* SUCCESS MODE */
+.success-mode { text-align: center; padding: 40px 30px; width: 400px; }
+.success-icon {
+  width: 70px; height: 70px; background-color: #dcfce7; color: #16a34a;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 35px; margin: 0 auto 15px;
+}
+/* Style riêng cho icon Chờ (Thanh toán sau) */
+.success-icon.pending-icon { background-color: #FEF3C7; color: #D97706; }
+
+.success-total { font-size: 28px; font-weight: bold; color: #2563EB; margin: 10px 0; }
+.note-text { color: #666; font-size: 14px; margin-top: 5px; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }

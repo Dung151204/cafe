@@ -1,0 +1,27 @@
+/* src/pages/warehouse/ImportStockModal.css */
+.modal-overlay {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5); z-index: 1100;
+  display: flex; justify-content: center; align-items: center;
+}
+
+.import-modal {
+  background: white; width: 400px; padding: 25px; border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  animation: popIn 0.3s;
+}
+
+.modal-header h3 { margin: 0; font-size: 18px; color: #111; }
+.product-summary { background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0; }
+.product-summary strong { display: block; font-size: 16px; margin-bottom: 5px; }
+.highlight-stock { color: #2563EB; font-weight: bold; }
+
+.form-group { margin-bottom: 15px; display: flex; flex-direction: column; }
+.form-group label { font-size: 13px; font-weight: 500; margin-bottom: 5px; }
+.form-group input { padding: 10px; border: 1px solid #ddd; border-radius: 6px; outline: none; }
+.form-group small { font-size: 11px; color: #888; margin-top: 3px; }
+
+.modal-footer { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+.btn-submit { background: #2563EB; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: 600; }
+
+@keyframes popIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }

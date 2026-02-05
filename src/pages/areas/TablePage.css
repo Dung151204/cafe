@@ -1,0 +1,67 @@
+/* src/pages/areas/TablePage.css */
+.table-page { padding: 20px; background-color: #f8f9fa; min-height: 100vh; font-family: 'Segoe UI', sans-serif; }
+
+/* Header */
+.page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; background: white; padding: 15px 25px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+.header-left { display: flex; gap: 15px; align-items: center; }
+.header-text h2 { margin: 0; font-size: 20px; color: #111; }
+.header-text p { margin: 2px 0 0; color: #666; font-size: 13px; }
+
+.header-status { display: flex; gap: 15px; font-size: 14px; color: #333; }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 5px; }
+.dot.green { background: #10b981; } .dot.red { background: #ef4444; } .dot.yellow { background: #f59e0b; } .dot.gray { background: #666; }
+
+.header-actions { display: flex; gap: 10px; }
+.btn-white, .btn-blue, .btn-gray { padding: 10px 15px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 8px; font-weight: 500; font-size: 14px; border: none; }
+.btn-white { background: #f3f4f6; color: #333; }
+.btn-blue { background: #2563EB; color: white; }
+.btn-gray { background: #e5e7eb; color: #333; }
+
+/* Tabs */
+.area-tabs { display: flex; gap: 10px; margin-bottom: 25px; overflow-x: auto; padding-bottom: 5px; }
+.area-tab { padding: 10px 25px; border-radius: 25px; border: 1px solid transparent; background: white; cursor: pointer; font-weight: 500; display: flex; align-items: center; gap: 8px; color: #555; transition: 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+.area-tab.active { background: #111; color: white; border-color: #111; }
+
+/* Grid */
+.table-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.table-card { background: white; border-radius: 16px; padding: 20px; border: 1px solid #eee; display: flex; flex-direction: column; min-height: 200px; transition: 0.2s; position: relative; overflow: hidden; }
+.table-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
+
+/* Card Variants */
+.table-card.empty { background: #ecfdf5; border-color: #d1fae5; }
+.table-card.occupied { background: #fef2f2; border-color: #fee2e2; }
+.table-card.reserved { background: #fffbeb; border-color: #fef3c7; }
+
+.card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.status-dot { width: 12px; height: 12px; border-radius: 50%; }
+.status-dot.empty { background: #10b981; }
+.status-dot.occupied { background: #ef4444; }
+.status-dot.reserved { background: #f59e0b; }
+
+.table-card h3 { margin: 0; font-size: 20px; color: #111; }
+.status-label { font-size: 12px; padding: 4px 10px; border-radius: 12px; color: white; font-weight: 600; }
+.table-card.empty .status-label { background: #10b981; }
+.table-card.occupied .status-label { background: #ef4444; }
+.table-card.reserved .status-label { background: #f59e0b; }
+
+.card-body { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.empty-state { text-align: center; color: #10b981; opacity: 0.8; }
+.icon-empty { font-size: 40px; margin-bottom: 10px; opacity: 0.5; }
+
+.row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px; color: #444; }
+.icon { color: #888; margin-right: 5px; }
+.total-price { margin-top: auto; text-align: right; color: #2563EB; font-weight: bold; font-size: 18px; border-top: 1px dashed rgba(0,0,0,0.1); padding-top: 10px; }
+/* Badge hiển thị số lượng bàn đặt trên Tab */
+.tab-badge {
+  background: #F59E0B; /* Màu vàng cam */
+  color: white;
+  font-size: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+  font-weight: bold;
+}
